@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import ResetButton from "./ResetButton";
+import CookieButton from "./CookieButton";
 import Timer from "./Timer";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Timer count={count} setCount={setCount} />
-      <ResetButton resetCount={setCount} />
+      <CookieButton cookieClick={setCount} />
     </div>
   );
 }
