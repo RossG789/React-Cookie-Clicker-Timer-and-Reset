@@ -1,7 +1,7 @@
-export default function CookieButton({ cookieClick }) {
+export default function CookieButton({ cookieClick, cps }) {
   return (
     <>
-      <button onClick={() => cookieClick((count) => count + 1)}>
+      <button onClick={() => cookieClick((count) => count + cps)}>
         Click for a Cookie
       </button>
     </>

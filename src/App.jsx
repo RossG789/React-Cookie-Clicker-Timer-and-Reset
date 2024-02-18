@@ -7,17 +7,17 @@ import UpgradeShop from "./Components/Upgrade";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [cps, setCps] = useState(1);
 
-  const [visible, setVisible] = useState(true);
-
-  const toggleElement = () => {
-    setVisible(!visible);
-  };
   return (
     <div>
-      <Timer count={count} setCount={setCount} />
-      <CookieButton cookieClick={setCount} />
-      <UpgradeShop count={count} multiplyCount={setCount} />
+      <Timer count={count} setCount={setCount} cps={cps} />
+      <CookieButton cookieClick={setCount} cps={cps} />
+      <UpgradeShop
+        count={count}
+        subtractCookies={setCount}
+        upgradeCps={setCps}
+      />
     </div>
   );
 }
