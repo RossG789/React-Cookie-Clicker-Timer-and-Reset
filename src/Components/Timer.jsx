@@ -7,7 +7,7 @@ export default function Timer(props) {
     }, 1000);
     // Clean Up Function
     return () => clearInterval(interval);
-  });
+  }, [props.cps]);
   return (
     <div>
       <h1>Cookie Count: {props.count}</h1>

@@ -12,7 +12,7 @@ export default function UpgradeShop(props) {
           <h2>{upgrade.upgradeName}</h2>
           <button
             onClick={() => {
-              console.log(props.count);
+              //   console.log(props.count);
               if (props.count >= upgrade.price) {
                 props.subtractCookies((count) => count - upgrade.price);
                 props.upgradeCps((cps) => cps + upgrade.multiplier);
